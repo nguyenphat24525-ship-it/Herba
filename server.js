@@ -56,7 +56,7 @@ app.post("/api/identify", upload.array("images",5), async (req,res) => {
     }
     const url = new URL("https://my-api.plantnet.org/v2/identify/all");
     url.searchParams.set("api-key",key);
-    url.searchParams.set("lang","vi");
+    url.searchParams.set("lang","en");
     url.searchParams.set("nb-results","5");
     url.searchParams.set("include-related-images","false");
     const upstream = await fetch(url,{method:"POST",body:form});
